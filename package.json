@@ -1,0 +1,18 @@
+{
+  "name": "cad-viewer",
+  "version": "1.0.0",
+  "description": "3D CAD Model Viewer based on Three.js",
+  "scripts": {
+    "start": "npx http-server -o -p 8080",
+    "dev": "npx http-server -o -p 8080"
+  },
+  "keywords": [
+    "cad",
+    "threejs",
+    "webgl",
+    "viewer",
+    "3d"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,212 @@
+#property-panel {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    width: 320px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    color: #0f172a;
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    user-select: text;
+    box-shadow:
+        0 8px 32px rgba(15, 23, 42, 0.1),
+        0 2px 4px rgba(15, 23, 42, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    z-index: 250;
+}
+
+/* ── Header ── */
+.prop-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 10px 10px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.prop-panel-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0e7490;
+    letter-spacing: -0.01em;
+}
+
+.prop-panel-close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.15s;
+    line-height: 1;
+}
+
+.prop-panel-close:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* ── Empty state ── */
+.prop-empty {
+    padding: 32px 16px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ── Scroll container ── */
+.prop-scroll {
+    padding: 8px 14px 14px;
+}
+
+/* ── Sections ── */
+.prop-section {
+    margin-bottom: 16px;
+}
+
+.prop-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* ── Table ── */
+.prop-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.prop-table tr {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.prop-table tr:last-child {
+    border-bottom: none;
+}
+
+.prop-label {
+    padding: 5px 8px 5px 0;
+    width: 90px;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.prop-value {
+    padding: 5px 0;
+    color: #0f172a;
+    font-weight: 500;
+    font-size: 12px;
+    word-break: break-all;
+    vertical-align: middle;
+}
+
+.prop-name {
+    font-weight: 600;
+    color: #0e7490;
+}
+
+.prop-dim {
+    font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+    font-weight: 600;
+    color: #059669;
+}
+
+/* ── Tag ── */
+.prop-tag {
+    display: inline-block;
+    background: rgba(14, 116, 144, 0.08);
+    color: #0e7490;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* ── Color swatch ── */
+.prop-color-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    top: -1px;
+}
+
+/* ── Hierarchy path ── */
+.prop-hierarchy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 4px 0;
+}
+
+.prop-hier-node {
+    padding: 2px 6px;
+    background: rgba(100, 116, 139, 0.06);
+    border-radius: 4px;
+    color: #475569;
+    font-weight: 500;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.prop-hier-current {
+    background: rgba(14, 116, 144, 0.1);
+    color: #0e7490;
+    font-weight: 700;
+}
+
+.prop-hier-arrow {
+    color: #cbd5e1;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 1px;
+}
+
+/* ── Scrollbar ── */
+#property-panel::-webkit-scrollbar {
+    width: 5px;
+}
+
+#property-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#property-panel::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+#property-panel::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

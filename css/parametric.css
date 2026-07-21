@@ -1,0 +1,316 @@
+/* ============ Parametric Panel — Sidebar Mode ============ */
+#parametric-panel {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Header */
+.parametric-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.parametric-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.parametric-title-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(9,162,165,.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.parametric-close {
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .15s;
+}
+
+.parametric-close:hover {
+    background: #f3f4f6;
+    color: #1a1a2e;
+}
+
+/* Body */
+.parametric-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Shape Type Selector */
+.parametric-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.parametric-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.parametric-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+.parametric-select:focus {
+    outline: none;
+    border-color: #09a2a5;
+    box-shadow: 0 0 0 3px rgba(9,162,165,.1);
+}
+
+/* Param Row */
+.parametric-params {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.param-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.param-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.param-value {
+    font-size: 11px;
+    font-weight: 500;
+    color: #09a2a5;
+    background: rgba(9,162,165,.08);
+    padding: 1px 8px;
+    border-radius: 4px;
+}
+
+.param-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.param-slider {
+    flex: 1;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e5e7eb;
+    border-radius: 2px;
+    outline: none;
+    accent-color: #09a2a5;
+}
+
+.param-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #09a2a5;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.15);
+}
+
+.param-number {
+    width: 56px;
+    padding: 4px 6px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #1a1a2e;
+    text-align: center;
+    font-family: inherit;
+}
+
+.param-number:focus {
+    outline: none;
+    border-color: #09a2a5;
+}
+
+.param-unit {
+    font-size: 10px;
+    color: #9ca3af;
+    min-width: 20px;
+}
+
+/* Material Presets */
+.material-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.material-preset {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1a1a2e;
+    transition: all .15s;
+    font-family: inherit;
+}
+
+.material-preset:hover {
+    border-color: #09a2a5;
+    background: rgba(9,162,165,.05);
+}
+
+.material-preset.active {
+    border-color: #09a2a5;
+    background: rgba(9,162,165,.1);
+    color: #09a2a5;
+}
+
+.material-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,.1);
+    flex-shrink: 0;
+}
+
+/* Footer */
+.parametric-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.parametric-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.parametric-btn-generate {
+    background: #09a2a5;
+    color: #fff;
+}
+
+.parametric-btn-generate:hover {
+    background: #07888a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(9,162,165,.3);
+}
+
+.parametric-btn-reset {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.parametric-btn-reset:hover {
+    background: #e5e7eb;
+    color: #1a1a2e;
+}
+
+/* ── "Xem 3D" primary button ── */
+.parametric-btn-view {
+    background: linear-gradient(135deg, #09a2a5 0%, #0ea5e9 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 24px;
+    box-shadow: 0 4px 14px rgba(9,162,165,.35);
+}
+.parametric-btn-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(9,162,165,.45);
+}
+
+/* ── Part number display ── */
+.parametric-partno {
+    background: #f0fdfa;
+    border: 1px solid #99f6e4;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #0f766e;
+    font-weight: 600;
+    font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+    word-break: break-all;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #config-sidebar {
+        width: 260px;
+        min-width: 260px;
+    }
+}
