@@ -1,0 +1,9 @@
+{
+  "partNumber": "SER11-D12-L150-E15-F12-A6-B6-P10-Q8-S12",
+  "modelFile": "SER11-D10-L100-E10-F10-A5-B5-P8-Q6-S10.stp",
+  "category": "Shaft Support",
+  "parameters": [
+    {"key": "D", "name": "Đường kính trụ", "value": 12, "unit": "mm", "type": "number", "min": 6, "max": 50, "step": 1},
+    {"key": "L", "name": "Chiều dài tổng", "value": 150, "unit": "mm", "type": "number", "min": 20, "max": 300, "step": 5}
+  ]
+}

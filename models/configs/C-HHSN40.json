@@ -1,0 +1,8 @@
+{
+  "partNumber": "C-HHSN40",
+  "modelFile": "SER11-D10-L100-E10-F10-A5-B5-P8-Q6-S10.stp",
+  "category": "Flat Hinge",
+  "parameters": [
+    {"key": "L", "name": "Chiều dài", "value": 40, "unit": "mm", "type": "number", "min": 25, "max": 100, "step": 5}
+  ]
+}
